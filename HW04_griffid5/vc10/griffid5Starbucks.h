@@ -7,6 +7,7 @@
 #pragma
 #include <string>
 using namespace std;
+#include "Starbucks.h"
 
 class Entry {
 public:
@@ -17,6 +18,10 @@ public:
 
 class griffid5Starbucks : public Starbucks {
 public:
+	griffid5Starbucks();
+	~griffid5Starbucks(void);
+	Entry* locations;
+	int size;
 
 	void build(Entry* c, int n) {
 
@@ -24,6 +29,6 @@ public:
 
 	Entry* getNearest(double x, double y) {
 
-	}
+	};
 
 };

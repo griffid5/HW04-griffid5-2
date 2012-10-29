@@ -5,13 +5,19 @@
 */
 
 #include "griffid5Starbucks.h"
+#include "Starbucks.h"
+
 
 griffid5Starbucks::griffid5Starbucks() {
 
 }
 
-void griffid5Starbucks::build(Entry* c, int n) {
+griffid5Starbucks::~griffid5Starbucks(void){
 
+}
+
+void griffid5Starbucks::build(Entry* c, int n) {
+	
 }
 
 Entry* griffid5Starbucks::getNearest(double x, double y) {

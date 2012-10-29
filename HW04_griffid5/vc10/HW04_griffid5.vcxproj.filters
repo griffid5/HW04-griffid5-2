@@ -29,7 +29,7 @@
     <ClInclude Include="griffid5Starbucks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\griffid5.IT\Desktop\Starbucks.h">
+    <ClInclude Include="..\include\Starbucks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

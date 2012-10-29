@@ -109,7 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
-    <ClInclude Include="C:\Users\griffid5.IT\Desktop\Starbucks.h" />
+    <ClInclude Include="..\include\Starbucks.h" />
     <ClInclude Include="griffid5Starbucks.h" />
   </ItemGroup>
   <ItemGroup>

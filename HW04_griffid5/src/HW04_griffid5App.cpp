@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include "Starbucks.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -14,20 +15,52 @@ class HW04_griffid5App : public AppBasic {
 	void mouseDown( MouseEvent event );	
 	void update();
 	void draw();
+	void prepareSettings(Settings* settings);
+
+private:
+	static const int AppWidth = 800;
+	static const int AppHeight = 800;
+	static const int TextureSize = 1024;
+	griffid5Starbucks* starbucksLocations;
 };
 
 void HW04_griffid5App::setup()
 {
-	Entry myEntries[7655];
-	string line;fds
-	double x, y;
-	int count = 0;
-	ifstream in("Starbucks_2006.csv");
-	if (in.is_open()) {
-		while(!in.eof()) {
-			Entry* entry = new Entry();
-			getline(in, line, \r')
+	ifstream in ("C:\Users\griffid5.IT.000\Documents\HW04StarterFiles\Starbucks_2006.csv");
+
+	vector<Entry> vector;
+
+	string line;
+	do {
+		Entry e;
+
+		getline(in, line, ',');
+		e.identifier = line; // 
+
+		in.get();
+		in >> e.x; // Stores the x coordinate
+
+		in.get();
+		in >> e.y; // Stores the y coordinate
+
+		vector.push_back(e); 
+	}
+	while (!in.eof());
+
+	Entry* locations = new Entry[vector.size()];
+
+	for (int i = 0; i < vector.size(); i++) {
+		locations[i] = vector[i]; // Place the locations into the vector.
+	}
+
+	starbucksLocations = new griffid5Starbucks();
+
+
 }
+
+void HW04_griffid5App::prepareSettings(Settings* settings) {
+	settings -> setWindowSize(AppWidth, AppHeight);
+	settings -> setResizable(false);
 
 void HW04_griffid5App::mouseDown( MouseEvent event )
 {
