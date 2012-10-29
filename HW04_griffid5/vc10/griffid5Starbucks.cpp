@@ -17,7 +17,11 @@ griffid5Starbucks::~griffid5Starbucks(void){
 }
 
 void griffid5Starbucks::build(Entry* c, int n) {
+	/* Build a k-d tree in which an x coordinate is looked
+	 at then a y coordinate and so on. 
+	 */
 	
+
 }
 
 Entry* griffid5Starbucks::getNearest(double x, double y) {

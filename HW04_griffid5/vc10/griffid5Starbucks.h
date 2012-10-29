@@ -20,15 +20,11 @@ class griffid5Starbucks : public Starbucks {
 public:
 	griffid5Starbucks();
 	~griffid5Starbucks(void);
-	Entry* locations;
+	Entry* locations; // Creates a new class of the locations brought in
 	int size;
 
-	void build(Entry* c, int n) {
+	void build(Entry* c, int n);
 
-	}
-
-	Entry* getNearest(double x, double y) {
-
-	};
+	Entry* getNearest(double x, double y);
 
 };
