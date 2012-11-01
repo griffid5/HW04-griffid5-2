@@ -38,19 +38,15 @@ void HW04_griffid5App::setup()
 		e.identifier = line; // 
 
 		in.get();
-		in >> e.x; // Stores the x coordinate
+		in >> e.x; 
 
 		in.get();
-		in >> e.y; // Stores the y coordinate
+		in >> e.y; 
 
 		vector.push_back(e); 
 	}
 	while (!in.eof());
 
-	Entry* locations = new Entry[vector.size()];
-
-	for (int i = 0; i < vector.size(); i++) {
-		locations[i] = vector[i]; // Place the locations into the vector.
 	}
 
 	starbucksLocations = new griffid5Starbucks();

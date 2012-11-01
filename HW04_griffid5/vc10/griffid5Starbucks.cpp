@@ -17,9 +17,18 @@ griffid5Starbucks::~griffid5Starbucks(void){
 }
 
 void griffid5Starbucks::build(Entry* c, int n) {
-	/* Build a k-d tree in which an x coordinate is looked
-	 at then a y coordinate and so on. 
-	 */
+	vector<Entry> vector;
+	for(int i = 0; i < n; i++) {
+		vector.push_back(c[i]);
+	}
+		for(int j = 0; j < vector.size(); j++) {
+			for(int r = 0; r < vector.size(); r++) {
+				if(((abs(vector[j].x) - abs(vector[r].x)) < .00001) 
+					&& ((abs(vector[j].y) - abs(vector[r].y)) < .00001) {
+						vector.delete(vector[j]);
+				}
+			}
+		}
 	
 
 }
